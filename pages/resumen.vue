@@ -36,7 +36,12 @@
     </div>
     <div class="resumen">
       <div class="experience timeline">
-        <div class="exp-title"><span>Experiencia</span></div>
+        <div class="exp-title">
+          <span>Experiencia</span>
+          <i class="material-icons">
+            emoji_events
+          </i>
+        </div>
         <ul>
           <li class="expitem">
             <span class="exptitle">MANZANA VERDE,Head of Data</span>
@@ -53,7 +58,7 @@
             <span class="exptime">ABRIL DEL 2019-ACTUALIDAD, LIMA</span>
             <span class="expdesciption"
               >Presentar métricas e identificar datos relevantes para iterar de
-              manera conveniente y ágil en nuestras reuniones de Scrum ;Mostrar
+              manera conveniente y ágil en nuestras reuniones de Scrum. Mostrar
               la data usando distintos sistemas de reportes AWS,Google Data
               Studio y Excel. Obtención de datos de distintas fuentes de
               información como Google Analytics, Base de datos MySql, AWS.
@@ -82,7 +87,12 @@
         </ul>
       </div>
       <div class="education timeline">
-        <div class="edu-title">Educación</div>
+        <div class="edu-title">
+          <span>Educación </span
+          ><i class="material-icons">
+            school
+          </i>
+        </div>
         <ul>
           <li class="eduitem university">
             <span class="edutitle">
@@ -187,7 +197,11 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
+ul {
+  margin: 0px !important;
+}
+
 .profile-foto {
   margin-left: -20px;
   margin-right: -20px;
@@ -248,7 +262,7 @@
   outline: 0;
   background: transparent;
   border-left: solid 2px #eee;
-  padding: 0 0 23px 20px;
+  padding: 0 0 0px 20px;
   font-size: 14px;
   color: #787878;
 }
@@ -351,24 +365,31 @@ ul.profile-information li:last-child {
   margin-left: 0px;
   margin-right: 0px;
 }
+.edutime {
+  font-size: 12px;
+}
 .exp-title {
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
-  font-size: 20px;
+  font-size: 25px;
   color: #001b32;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle !important;
 }
 .expdesciption {
   color: #989898;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 25px;
 }
 .exptitle {
   color: #001b32;
   font-weight: 700;
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
+  font-size: 20px;
 }
 .edu-title {
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
-  font-size: 20px;
+  font-size: 25px;
   color: #001b32;
 }
 ul.profile-information li span {
@@ -380,6 +401,14 @@ ul.profile-information li span {
 .university {
   display: flex;
   flex-direction: column;
+}
+.resumen ul {
+  padding: 0px;
+}
+
+i {
+  vertical-align: middle;
+  line-height: . !important;
 }
 
 @media (min-width: 600px) {

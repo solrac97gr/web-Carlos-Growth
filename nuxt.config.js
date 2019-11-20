@@ -16,9 +16,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Staatliches&display=swap'
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
       }
     ],
     script: [

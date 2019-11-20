@@ -60,13 +60,13 @@ canvas {
   .title {
     margin-top: 100px;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 40px;
   }
   .subtitle {
-    font-size: 20px;
+    font-size: 30px;
   }
   .seotitle {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 </style>
