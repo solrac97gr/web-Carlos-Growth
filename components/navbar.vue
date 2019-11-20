@@ -52,7 +52,10 @@ ul {
   justify-content: space-between;
   list-style: none;
   align-items: center;
+  margin: 0px !important;
+  padding-right: 23px;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -70,10 +73,10 @@ li .navitem {
   padding-right: 15px;
   font-size: 1.05em;
   color: #001b32;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
   font-weight: 600;
   text-decoration: none;
+  padding: 18px;
   &.nuxt-link-exact-active.nuxt-link-active {
     border-bottom: 5px solid #821d25;
   }
@@ -89,7 +92,6 @@ li .navitem {
     box-shadow: 0px -2px 11px -1px rgba(0, 0, 0, 0.75);
   }
   ul {
-    margin: 0;
     padding: 10px;
     padding-bottom: 0px;
   }
