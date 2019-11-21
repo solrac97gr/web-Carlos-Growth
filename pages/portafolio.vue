@@ -131,6 +131,11 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {}
+}
+</script>
 <style lang="css" scoped>
 img {
   height: 150px;

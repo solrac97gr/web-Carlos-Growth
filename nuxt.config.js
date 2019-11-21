@@ -40,7 +40,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/node_modules/vue-particles'],
+  plugins: [{ src: '@/plugins/vuetouch', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -70,9 +70,12 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    vendor: [],
+    extend(config, ctx) {
+      if (ctx.isServer) {
+        config.resolve.alias.hammerjs$ =
+          '/node_modules/vue-touch/dist/hammer-ssr.js'
+      }
+    }
   }
 }
