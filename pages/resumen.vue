@@ -38,9 +38,6 @@
       <div class="experience timeline">
         <div class="exp-title">
           <span>Experiencia</span>
-          <i class="material-icons">
-            emoji_events
-          </i>
         </div>
         <ul>
           <li class="expitem">
@@ -88,10 +85,7 @@
       </div>
       <div class="education timeline">
         <div class="edu-title">
-          <span>Educación </span
-          ><i class="material-icons">
-            school
-          </i>
+          <span>Educación </span>
         </div>
         <ul>
           <li class="eduitem university">
@@ -99,8 +93,7 @@
               <b>UCV</b>
               , Ingeniero de Sistemas
             </span>
-            <span class="edutime"></span>
-            ABRIL DEL 2017-ACTUALIDAD
+            <span class="edutime">ABRIL DEL 2017-ACTUALIDAD</span>
           </li>
           <li class="eduitem">
             <span class="edutitle">
@@ -221,19 +214,18 @@ ul {
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
 }
 .resumen-container {
-  margin-top: 130px;
+  margin-top: 150px;
   padding: 10px;
 }
 .card-profile {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.08);
   padding: 20px;
   align-items: flex-start;
   justify-content: center;
   align-items: center;
-  z-index: -1;
 }
 .profile-information {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -250,6 +242,7 @@ ul {
   margin: 0 auto 30px;
   display: table;
   justify-content: center;
+  padding-top: 13px;
 }
 .profile-information li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -261,72 +254,12 @@ ul {
   border: 0;
   outline: 0;
   background: transparent;
-  border-left: solid 2px #eee;
+  border-left: solid 2px #821d25;
   padding: 0 0 0px 20px;
   font-size: 14px;
   color: #787878;
 }
-ul.profile-information li:first-child {
-  padding-bottom: 10px;
-  padding-left: 30px;
-}
-ul.profile-information li:first-child:after {
-  background: url(../assets/images/logo.svg);
-  content: '';
-  width: 30px;
-  height: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 16px -15px;
-  background-size: 27px 10px;
-  z-index: -1;
-}
-ul.profile-information li:first-child:before {
-  background: #821d25 !important;
-  z-index: -1;
-}
-ul.profile-information li:first-child:before {
-  margin-left: -51px;
-  margin-top: -30px;
-  margin-bottom: 20px;
-  position: relative;
-  border: 0;
-  width: 40px;
-  height: 40px;
-  padding: 11px 14px;
-  box-shadow: 0px 2px 32px 0px rgba(4, 123, 248, 0.3);
-  z-index: -1;
-}
-.timeline li:before,
-ul.profile-information li:before {
-  border-color: #821d25 !important;
-  z-index: -1;
-}
-ul.profile-information li:before {
-  border-color: #821d25;
-}
-ul.profile-information li:before {
-  content: '';
-  border: solid 2px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  font-size: 8px;
-  margin-left: -25px;
-  margin-top: 2px;
-  font-weight: 400;
-  background: #fff;
-  display: block;
-  position: absolute;
-}
-ul.profile-information li:last-child {
-  border: 0;
-  margin-left: 2px;
-  margin-top: -2px;
-}
+
 .btn-download {
   color: white;
   background-image: linear-gradient(
@@ -349,16 +282,22 @@ ul.profile-information li:last-child {
   flex-direction: column;
   justify-content: flex-start;
   border-left: 3px solid #821d25;
-  padding: 5px;
+  padding-bottom: 10.5px;
+  padding-top: 10.5px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 .eduitem {
   list-style: none;
-  padding: 5px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 6.5px;
+  padding-top: 6.5px;
   border-left: 3px solid #821d25;
 }
 .resumen {
   border-radius: 10px;
-  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.08);
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -405,10 +344,8 @@ ul.profile-information li span {
 .resumen ul {
   padding: 0px;
 }
-
-i {
-  vertical-align: middle;
-  line-height: . !important;
+a {
+  text-decoration: none;
 }
 
 @media (min-width: 600px) {
@@ -422,7 +359,6 @@ i {
     align-items: flex-start;
     justify-content: center;
     align-items: center;
-    z-index: -1;
   }
   .resumen-container {
     display: flex;

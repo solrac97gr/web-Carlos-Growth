@@ -90,6 +90,7 @@ li .navitem {
     text-align: center;
     justify-content: space-between;
     box-shadow: 0px -2px 11px -1px rgba(0, 0, 0, 0.75);
+    padding-top: 10px;
   }
   ul {
     padding: 10px;
