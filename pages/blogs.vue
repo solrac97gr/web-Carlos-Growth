@@ -1,6 +1,6 @@
 <template>
   <div class="porfolio">
-    <h2 class="principal">Portafolio</h2>
+    <h2 class="principal">Últimos Posts</h2>
     <div class="project-container">
       <div v-for="post in posts" :key="post.id" class="portfolio-card">
         <img :src="post.attachment_image.mv_sm" alt="" />
@@ -31,7 +31,7 @@ export default {
     headers: {'Access-Control-Allow-Origin': '*'}
 };
       this.$axios.$get(
-        'https://carlosgrowth.online/blog/wp-json/wp/v2/posts?categories=16',
+        'https://carlosgrowth.online/blog/wp-json/wp/v2/posts',
        
       ).then(
          (rest)=>this.posts=rest

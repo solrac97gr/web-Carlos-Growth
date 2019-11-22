@@ -1,11 +1,9 @@
 <template>
   <div>
     <Navbar />
-    /* eslint-disable */
     <v-touch @swiperight="right"
       ><v-touch @swipeleft="left"><nuxt /></v-touch
     ></v-touch>
-    /* eslint-enable */
   </div>
 </template>
 <script>
@@ -17,7 +15,7 @@ export default {
   },
   data() {
     return {
-      routes: ['/', '/resumen', '/portafolio']
+      routes: ['/', '/resumen', '/portafolio', 'blogs']
     }
   },
   methods: {
@@ -29,6 +27,8 @@ export default {
         this.$router.push(this.routes[currentindex + 1])
       } else if (currentindex === 1) {
          this.$router.push(this.routes[currentindex + 1])
+      }else if (currentindex === 2) {
+         this.$router.push(this.routes[currentindex + 1])
       }else{
         this.$router.push(this.routes[0])
       }
@@ -37,12 +37,16 @@ export default {
       const current = this.$route.path
       const currentindex = this.routes.indexOf(current)
       /*eslint-disable */
-      if (currentindex === 2) {
+      if (currentindex === 3) {
+        this.$router.push(this.routes[currentindex - 1])
+      }
+      else if (currentindex === 2) {
         this.$router.push(this.routes[currentindex - 1])
       } else if (currentindex === 1) {
          this.$router.push(this.routes[currentindex - 1])
-      }else{
-        this.$router.push(this.routes[2])
+      }
+      else{
+        this.$router.push(this.routes[3])
       }
     }
   }

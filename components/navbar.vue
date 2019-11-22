@@ -26,7 +26,7 @@
             <nuxt-link class="navitem" to="/portafolio">Portafolio</nuxt-link>
           </li>
           <li class="navitem">
-            <a class="navitem" href="/blog">Blog</a>
+            <nuxt-link class="navitem" to="/blogs">Blog</nuxt-link>
           </li>
         </ul>
       </nav>

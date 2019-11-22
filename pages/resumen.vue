@@ -365,7 +365,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    margin-top: 80px;
+    margin-top: 70px;
   }
 
   .resumen {
