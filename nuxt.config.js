@@ -14,20 +14,8 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
-
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-      }
-    ],
-    script: [
-      {
-        src:
-          'https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
+    script: []
   },
   /*
    ** Customize the progress-bar color
