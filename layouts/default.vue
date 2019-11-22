@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      routes: ['/', '/resumen', '/portafolio', 'blogs']
+      routes: ['/', '/resumen', '/portafolio', '/blogs']
     }
   },
   methods: {
