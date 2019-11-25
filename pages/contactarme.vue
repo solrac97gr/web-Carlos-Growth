@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   data() {
     return {
@@ -31,13 +31,10 @@ export default {
 
   methods: {
     sendlead() {
-      axios.post({
-        url: 'http://localhost:8500/create',
-        data: {
-          email: this.email,
-          name: this.name // This is the body part
-        }
-      })
+      const url =
+        'http://api.carlosgrowth.online/create/' + this.name + '/' + this.email
+
+      this.$axios.$get(url)
     }
   }
 }
