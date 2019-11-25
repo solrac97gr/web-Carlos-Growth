@@ -7,6 +7,13 @@
         Growth Hacking para Startups en Perú.
       </h1>
     </div>
+    <div>
+      <nuxt-link to="/contactarme"
+        ><div class="btn-contact">
+          <span>Empezar a crecer</span>
+        </div></nuxt-link
+      >
+    </div>
     <video
       id="videobanner"
       autoplay
@@ -55,6 +62,19 @@ canvas {
   top: 0;
   left: 0;
 }
+.btn-contact {
+  width: 20%;
+  display: block;
+  background-color: #821d25;
+  color: white;
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 20px;
+  font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
+  margin: auto;
+  position: relative;
+}
 
 @media (max-width: 600px) {
   .title {
@@ -67,6 +87,9 @@ canvas {
   }
   .seotitle {
     font-size: 20px;
+  }
+  .btn-contact {
+    display: none;
   }
 }
 </style>

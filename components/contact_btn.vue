@@ -20,6 +20,18 @@
   font-weight: 400;
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) {
+  .btn-contact {
+    display: block;
+    background-color: #821d25;
+    color: white;
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+    font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
+    margin: auto;
+    position: relative;
+  }
 }
 </style>
