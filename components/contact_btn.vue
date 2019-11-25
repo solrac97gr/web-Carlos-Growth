@@ -2,7 +2,7 @@
   <div>
     <nuxt-link to="/contactarme"
       ><div class="btn-contact">
-        <span>Empezár a crecer</span>
+        <span>Empezar a crecer</span>
       </div></nuxt-link
     >
   </div>

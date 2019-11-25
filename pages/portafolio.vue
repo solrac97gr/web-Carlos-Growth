@@ -21,7 +21,7 @@ export default {
       posts: []
     }
   },
-  created() {
+  mounted() {
     this.fetchSomething()
     /*eslint-disable */
   },
