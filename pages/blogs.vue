@@ -1,7 +1,8 @@
 <template>
   <div class="porfolio">
     <h2 class="principal">Últimos Posts</h2>
-    <div class="project-container">
+    <Loader v-if="complete" />
+    <div v-if="loading" class="project-container">
       <div v-for="post in posts" :key="post.id" class="portfolio-card">
         <img :src="post.attachment_image.mv_sm" alt="" />
         <span class="title" v-html="post.title.rendered" />
@@ -15,10 +16,16 @@
   </div>
 </template>
 <script>
+import Loader from '../components/loader.vue'
 export default {
+  components: {
+    Loader
+  },
   data() {
     return {
-      posts: []
+      posts: [],
+      loading: true,
+      complete: true
     }
   },
   mounted() {
@@ -31,11 +38,17 @@ export default {
     headers: {'Access-Control-Allow-Origin': '*'}
 };
       this.$axios.$get(
-        'https://carlosgrowth.online/blog/wp-json/wp/v2/posts',
+        'https://carlosgrowth.com/blog/wp-json/wp/v2/posts?categories_exclude=16',
        
       ).then(
-         (rest)=>this.posts=rest
-      )
+         (rest)=>{this.posts=rest
+         this.loading=true
+         this.complete=false
+         }
+      ).catch(()=>{
+        this.loading=true
+        this.complete=false
+      })
      
       
     }

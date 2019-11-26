@@ -2,39 +2,60 @@
   <div class="form-container">
     <h2 class="title">Comiénza tu estrategia de Growth.</h2>
     <form id="formID" action="submit" @submit.prevent="sendlead">
-      <div class="formgroup">
+      <div v-if="!sending" class="formgroup">
         <span class="form-text">Ingresa tu email:</span>
         <input v-model="email" type="email" required />
       </div>
-      <div class="formgroup">
+      <div v-if="!sending" class="formgroup">
         <span class="form-text">Ingresa tu nombre:</span>
         <input v-model="name" type="text" />
       </div>
-      <button class="send-btn-desktop" type="submit" form="formID">
+      <button
+        v-if="!sending"
+        class="send-btn-desktop"
+        type="submit"
+        form="formID"
+      >
         Contáctame
       </button>
     </form>
-    <button class="send-btn-mobile" type="submit" form="formID">
+    <div v-if="sending">Pronto te contacto</div>
+    <Loader v-if="loader" />
+    <button v-if="!sending" class="send-btn-mobile" type="submit" form="formID">
       Contáctame
     </button>
   </div>
 </template>
 <script>
-// import axios from 'axios'
+import Loader from '../components/loader.vue'
 export default {
+  components: {
+    Loader
+  },
   data() {
     return {
       email: '',
-      name: ''
+      name: '',
+      sending: false,
+      loader: false
     }
   },
 
   methods: {
     sendlead() {
       const url =
-        'http://api.carlosgrowth.online/create/' + this.name + '/' + this.email
-
-      this.$axios.$get(url)
+        'https://api.carlosgrowth.com/create/' + this.name + '/' + this.email
+      this.loader = true
+      this.$axios
+        .$get(url)
+        .then(() => {
+          this.sending = true
+          this.loader = false
+        })
+        .catch(() => {
+          this.sending = true
+          this.loader = false
+        })
     }
   }
 }
@@ -58,6 +79,7 @@ input {
   width: 100%;
   padding: 8px;
 }
+
 input:focus {
   outline: none;
   border: 3px solid #821d25;
