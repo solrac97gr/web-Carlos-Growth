@@ -95,6 +95,7 @@ img {
   font-size: 13px;
   color: #989898;
   font-weight: 400;
+  font-family: Helvetica, sans-serif;
 }
 .portfolio-card {
   width: 300px;

@@ -231,7 +231,7 @@ ul {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   line-height: 1.42857143;
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, sans-serif;
   box-sizing: border-box;
   padding: 0;
   border: 0;
@@ -294,6 +294,7 @@ ul {
   padding-bottom: 6.5px;
   padding-top: 6.5px;
   border-left: 3px solid #821d25;
+  font-family: Helvetica, sans-serif;
 }
 .resumen {
   border-radius: 10px;
@@ -306,6 +307,7 @@ ul {
 }
 .edutime {
   font-size: 12px;
+  font-family: Helvetica, sans-serif;
 }
 .exp-title {
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
@@ -319,6 +321,7 @@ ul {
   color: #989898;
   font-weight: 400;
   line-height: 25px;
+  font-family: Helvetica, sans-serif;
 }
 .exptitle {
   color: #001b32;
@@ -336,6 +339,7 @@ ul.profile-information li span {
 }
 .exptime {
   font-size: 12px;
+  font-family: Helvetica, sans-serif;
 }
 .university {
   display: flex;

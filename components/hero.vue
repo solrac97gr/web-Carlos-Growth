@@ -8,24 +8,23 @@
       </h1>
     </div>
     <div>
-      <nuxt-link to="/contactarme"
+      <nuxt-link class="call" to="/contactarme"
         ><div class="btn-contact">
           <span>Empezar a crecer</span>
         </div></nuxt-link
       >
     </div>
-    <video
-      id="videobanner"
-      autoplay
-      muted
-      playsinline
-      loop
-      src="~/assets/video/video.mp4"
-    ></video>
+
+    <Particles />
   </div>
 </template>
 <script>
-export default {}
+import Particles from '../components/particles'
+export default {
+  components: {
+    Particles
+  }
+}
 </script>
 <style scoped>
 #videobanner {
@@ -36,6 +35,9 @@ export default {}
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+}
+.back {
+  width: 100%;
 }
 
 .title {
@@ -50,6 +52,7 @@ export default {}
 .seotitle {
   color: white;
   font-size: 1.2em;
+  font-family: Helvetica, sans-serif;
 }
 .content {
   color: #f1f1f1;
@@ -72,10 +75,19 @@ canvas {
   font-size: 28px;
   padding: 10px;
   font-weight: 400;
-  border-radius: 20px;
+  text-decoration: none;
+
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
   margin: auto;
   position: relative;
+}
+.btn-contact:hover {
+  background-color: #bd1623;
+  box-shadow: 0px 2px 3px 0px rgba(189, 22, 35, 0.7);
+  transition-delay: 0s;
+}
+.call {
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {

@@ -2,16 +2,16 @@
   <div class="form-container">
     <h2 class="title">Comiénza tu estrategia de Growth.</h2>
     <form id="formID" action="submit" @submit.prevent="sendlead">
-      <div v-if="!sending" class="formgroup">
+      <div v-if="showform" class="formgroup">
         <span class="form-text">Ingresa tu email:</span>
         <input v-model="email" type="email" required />
       </div>
-      <div v-if="!sending" class="formgroup">
+      <div v-if="showform" class="formgroup">
         <span class="form-text">Ingresa tu nombre:</span>
         <input v-model="name" type="text" />
       </div>
       <button
-        v-if="!sending"
+        v-if="showform"
         class="send-btn-desktop"
         type="submit"
         form="formID"
@@ -19,7 +19,7 @@
         Contáctame
       </button>
     </form>
-    <div v-if="sending">Pronto te contacto</div>
+    <div v-if="sending" class="succes">Te contactaré pronto</div>
     <Loader v-if="loader" />
     <button v-if="!sending" class="send-btn-mobile" type="submit" form="formID">
       Contáctame
@@ -37,7 +37,8 @@ export default {
       email: '',
       name: '',
       sending: false,
-      loader: false
+      loader: false,
+      showform: true
     }
   },
 
@@ -46,6 +47,7 @@ export default {
       const url =
         'https://api.carlosgrowth.com/create/' + this.name + '/' + this.email
       this.loader = true
+      this.showform = false
       this.$axios
         .$get(url)
         .then(() => {
@@ -65,6 +67,11 @@ export default {
   font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
   font-size: 30px;
   color: #001b32;
+}
+.succes {
+  font-family: 'BigNoodleTitling', 'Staatliches', 'coursive';
+  font-size: 20px;
+  color: #821d25;
 }
 .form-container {
   margin-top: 130px;
@@ -102,6 +109,7 @@ input:focus {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 21px;
+  font-family: Helvetica, sans-serif;
   color: #989898;
 }
 .send-btn-desktop {

@@ -70,6 +70,7 @@ img {
 .porfolio {
   margin-top: 80px;
   padding: 0px 30px 30px 30px;
+  width: 100%;
 }
 .project-container {
   width: calc(200px * 4+30+6.5);
@@ -95,6 +96,7 @@ img {
   font-size: 13px;
   color: #989898;
   font-weight: 400;
+  font-family: Helvetica, sans-serif;
 }
 .portfolio-card {
   width: 300px;

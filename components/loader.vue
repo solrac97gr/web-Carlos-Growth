@@ -160,6 +160,12 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+#neuronSys {
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #neuron {
   fill: none;
   stroke: #821d25;
@@ -210,7 +216,9 @@ export default {
 @media (min-width: 600px){
   #neuronSys{
     width: 30%;
-    margin: auto
+    position: relative; 
+left: 50%;
+transform: translateX(-50%);
   }
 }
 </style>
