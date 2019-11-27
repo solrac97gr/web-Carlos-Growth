@@ -58,6 +58,14 @@ export default {
           this.sending = true
           this.loader = false
         })
+      const trelloUrl =
+        'https://api.trello.com/1/cards?name=' +
+        this.name +
+        '&desc=' +
+        this.email +
+        '&idList=5ddedfe256df25175b99733d&keepFromSource&key=34ba1f109d32b1fd3f1aa298db40c88f&token=627f790da80c6e28060a509de0d2281f21d2cb500c8848f53e72ad386e42c5eb'
+
+      this.$axios.$post(trelloUrl)
     }
   }
 }

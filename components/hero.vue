@@ -51,8 +51,8 @@ export default {
 }
 .seotitle {
   color: white;
-  font-size: 1.2em;
-  font-family: Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-family: 'BigNoodleTitling', Helvetica, sans-serif;
 }
 .content {
   color: #f1f1f1;
@@ -100,7 +100,7 @@ canvas {
     font-size: 30px;
   }
   .seotitle {
-    font-size: 20px;
+    font-size: 22px;
   }
   .btn-contact {
     display: none;
