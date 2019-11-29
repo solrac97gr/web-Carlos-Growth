@@ -20,13 +20,16 @@
             <nuxt-link class="navitem" to="/">Inicio</nuxt-link>
           </li>
           <li class="navitem">
-            <nuxt-link class="navitem" to="/resumen">Resumen</nuxt-link>
+            <nuxt-link class="navitem" to="/resumen">CV</nuxt-link>
           </li>
           <li class="navitem">
-            <nuxt-link class="navitem" to="/portafolio">Portafolio</nuxt-link>
+            <nuxt-link class="navitem" to="/portafolio">Portfolio</nuxt-link>
           </li>
           <li class="navitem">
             <nuxt-link class="navitem" to="/blogs">Blog</nuxt-link>
+          </li>
+          <li class="navitem">
+            <nuxt-link class="navitem" to="/herramientas">Tools</nuxt-link>
           </li>
         </ul>
       </nav>

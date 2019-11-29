@@ -4,17 +4,25 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Carlos Growth' || '',
+    title: 'Carlos Growth 🥇| Growth & Data ✅',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'Descubre las estrategias de Growth Hacking más modernas usadas actualmente por las Startups en Perú  🚀,Empieza a crecer ya! ✅'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.min.css'
+      }
+    ],
+
     script: [
       {
         src:
@@ -52,7 +60,14 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/google-adsense',
+      {
+        id: 'ca-pub-9020181949258952'
+      }
+    ],
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-5FVZBN6' }]
   ],
   /*
    ** Axios module configuration

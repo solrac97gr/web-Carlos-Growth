@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <h2 class="title">Comiénza tu estrategia de Growth.</h2>
+    <h1 class="title">Comiénza tu estrategia de Growth.</h1>
     <form id="formID" action="submit" @submit.prevent="sendlead">
       <div v-if="showform" class="formgroup">
         <span class="form-text">Ingresa tu email:</span>

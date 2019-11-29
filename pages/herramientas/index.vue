@@ -1,75 +1,73 @@
 <template>
   <div class="porfolio">
-    <h1 class="principal">Portafolio</h1>
-    <Loader v-if="complete" />
+    <h1 class="principal">Herramientas Growth</h1>
+
     <div class="project-container">
-      <div v-for="post in posts" :key="post.id" class="portfolio-card">
-        <img :src="post.attachment_image.mv_sm" alt="" />
-        <span class="title" v-html="post.title.rendered" />
-        <span class="subtitle">{{ post.date }}</span>
-        <span class="description" v-html="post.excerpt.rendered" />
-        <a :href="post.link">
-          <div class="btn-read">Ver más</div>
-        </a>
+      <div v-for="tool in tools" :key="tool.id" class="portfolio-card">
+        <img src="../../assets/images/buyer-generator.jpeg" alt="" />
+        <span class="title" v-html="tool.title" />
+        <span class="subtitle">{{ tool.date }}</span>
+        <span class="description"
+          >{{ tool.excerpt
+          }}<span class="cta">{{ tool.calltoaction }}</span></span
+        >
+        <nuxt-link :to="tool.link">
+          <div class="btn-read">Ir a la herramienta</div>
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Loader from '../components/loader.vue'
 export default {
-  components: {
-    Loader
-  },
+  components: {},
   head() {
     return {
-      title: 'Proyectos Growth Hacking & Data 🥇',
+      title: this.title,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
           content:
-            'Proyectos desarrollados usando tecnologías actuales y abordando temas de vanguardia'
+            'Las mejores herramientas de growth hacking para tu startup te las vas a perder entra y comienza a crecer ya!'
         }
       ]
     }
   },
   data() {
     return {
-      posts: [],
-      loading: true,
+      title: 'Herramientas de Growth Hacking 🥇',
+      tools: [
+        {
+          id: '1',
+          title: 'Buyer Persona Generator',
+          date: '30-09-2019',
+          excerpt:
+            'Es muy importante conocer al cliente por el cual trabajas, una de las mejores formas de hacerlo es personificarlo para tener presente para quien es que trabajamos.',
+          calltoaction: 'Descubre tu comprador ideal',
+          link: '/herramientas/buyer-generator',
+          image: '../../assets/images/buyer-generator.jpeg'
+        }
+      ],
+
       complete: true
     }
   },
   mounted() {
-    this.fetchSomething()
     /*eslint-disable */
+    setTimeout(()=>{ this.complete=false; },2000)
   },
   methods: {
-    fetchSomething() {
-      var config = {
-    headers: {'Access-Control-Allow-Origin': '*'}
-};
-      this.$axios.$get(
-        'https://carlosgrowth.com/blog/wp-json/wp/v2/posts?categories=16',
-       
-      ).then(
-         (rest)=>{this.posts=rest
-         this.loading=true
-         this.complete=false
-         }
-      ).catch(()=>{
-        this.loading=true
-        this.complete=false
-      })
-     
-      
-    }
+    
   }
 }
 </script>
 <style lang="css" scoped>
+.cta{
+    font-weight: bold;
+    font-size: 15px
+}
 img {
   height: 150px;
   margin: -20px -20px 10px -20px;
@@ -119,7 +117,7 @@ img {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   margin-left: 6.5px;
   margin-right: 6.5px;
   margin-top: 13px;

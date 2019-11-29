@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      routes: ['/', '/resumen', '/portafolio', '/blogs']
+      routes: ['/', '/resumen', '/portafolio', '/blogs', '/herramientas']
     }
   },
   methods: {
@@ -29,6 +29,8 @@ export default {
          this.$router.push(this.routes[currentindex + 1])
       }else if (currentindex === 2) {
          this.$router.push(this.routes[currentindex + 1])
+      }else if (currentindex === 3) {
+         this.$router.push(this.routes[currentindex + 1])
       }else{
         this.$router.push(this.routes[0])
       }
@@ -37,7 +39,10 @@ export default {
       const current = this.$route.path
       const currentindex = this.routes.indexOf(current)
       /*eslint-disable */
-      if (currentindex === 3) {
+      if (currentindex === 4) {
+        this.$router.push(this.routes[currentindex - 1])
+      }
+      else if (currentindex === 3) {
         this.$router.push(this.routes[currentindex - 1])
       }
       else if (currentindex === 2) {
@@ -46,7 +51,7 @@ export default {
          this.$router.push(this.routes[currentindex - 1])
       }
       else{
-        this.$router.push(this.routes[3])
+        this.$router.push(this.routes[4])
       }
     }
   }

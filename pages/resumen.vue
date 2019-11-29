@@ -1,7 +1,7 @@
 <template>
   <div class="resumen-container">
     <div class="card-profile">
-      <span class="name">Carlos García Rosales</span>
+      <h1 class="name">Carlos García Rosales</h1>
       <span class="profression">Growth Hacker</span>
       <img
         class="profile-foto"
@@ -190,6 +190,24 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: 'Carlos García CV ✅',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'CV Oficial, mi ruta de aprendizaje de cursos online para Growth Hacking que e llevado hasta ahora'
+        }
+      ]
+    }
+  }
+}
+</script>
 <style scoped>
 ul {
   margin: 0px !important;

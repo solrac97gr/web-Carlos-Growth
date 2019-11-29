@@ -1,6 +1,6 @@
 <template>
   <div class="porfolio">
-    <h2 class="principal">Últimos Posts</h2>
+    <h1 class="principal">Últimos Posts</h1>
     <Loader v-if="complete" />
     <div v-if="loading" class="project-container">
       <div v-for="post in posts" :key="post.id" class="portfolio-card">
@@ -21,6 +21,21 @@ export default {
   components: {
     Loader
   },
+  head() {
+    return {
+      title: 'Blog Growth Hacking & Data 🥇',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Enterate de las más actuales tecnicas de Growth Hacking, aprende ya a crecer de forma acelerada desde 0 a Experto'
+        }
+      ]
+    }
+  },
+
   data() {
     return {
       posts: [],
