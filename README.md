@@ -2,7 +2,7 @@
 
 # Carlos Growth FrontEnd| Developing...
 Website built using nuxtjs a server side side rendering framework from vue, the objective of this page is to show my projects and consume my api wordpress where I publish both my post and my projects.
-<p align="center"><img src="https://i.imgur.com/ZRtE1xy.png" width="400" /></p>
+<p align="center"><img src="https://i.imgur.com/WjABUWY.png" width="400" /></p>
 
 <p align="center"><img src="https://i.imgur.com/I3UTRJm.png" width="200" /><img src="https://i.imgur.com/UB47cGK.png" width="200" /></p>
 
