@@ -1,6 +1,7 @@
-# portfolio
+<p align="center"><img src="https://carlosgrowth.com/_nuxt/img/06308a4.svg" width=200/></p>
 
-> my personal portfolio
+# Carlos Growth FrontEnd| Developing...
+Website built using nuxtjs a server side side rendering framework from vue, the objective of this page is to show my projects and consume my api wordpress where I publish both my post and my projects.
 
 ## Build Setup
 
